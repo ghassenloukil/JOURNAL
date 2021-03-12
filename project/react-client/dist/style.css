@@ -1,0 +1,71 @@
+body {
+    background-color: radial-gradient(#302b63, #24243e);
+    background-image: url("https://camo.envatousercontent.com/e333a4e98051e9d6acb0af13ff1842b77741e194/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f645a6e73306c3375734141573961545872632f67697068792e676966");
+    background-size: 1000px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  form {
+    margin: 12% auto;
+    background-color: #f7f7f9;
+    border: 3px solid #f1f1f1;
+    width: 380px;
+    
+    /* position: relative; */
+  }
+  
+  .Alert {
+    text-align: center;
+    background-color: #e17055;
+    height : 40px;
+    font-size : 17px ;
+    font-weight: 25;
+    border-radius : 4% ;
+    padding: auto;
+    padding-top: 15px;
+  }
+  table {
+    background-color :#f7f7f9 ;
+    margin : auto ;
+    width :60%  ;
+    border: 2px solid black;
+  }
+  input, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #599baf;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 70%;
+  }
+  
+  #button1{
+    background-color: rgb(206, 162, 162);
+    width : 30%;
+    float : right;
+    cursor: pointer;
+    padding : 14px 20px ; 
+    
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  

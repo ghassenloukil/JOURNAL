@@ -1,7 +1,7 @@
 {
-  "name": "github-fetcher-fullstack-v2",
+  "name": "journal-form",
   "version": "1.0.0",
-  "description": "",
+  "description": "form for users",
   "main": "index.js",
   "scripts": {
     "react-dev": "webpack -d --watch",
