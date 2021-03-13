@@ -1,6 +1,7 @@
-const db  = require('./index.js');
-const Blog = require('./config.js');
+const mysql  = require('mysql2');
+const mysqlConfig = require('../controlers/config2.js');
 
+const connection = mysql.createConnection(mysqlConfig)
 const posts = [
   {
     title: 'for you, from me. no justice. no peace.',
@@ -83,9 +84,23 @@ const posts = [
   }
 ];
 
-const insertSampleBlogs = function() {
-  Blog.create(posts)
-    .then(() => db.disconnect());
-};
 
-insertSampleBlogs();
+const insert = (data) => {
+    return new Promise((resolve, reject) => {
+        for (const blog of data) {
+            let syntax = ` insert into blogs ( title, author, imageUrl, body, views) values (? ,? ,? ,? ,? )`
+            connection.query(syntax, [blog.title, blog.author, blog.imageUrl, blog.body, blog.views], (err, res) => {
+                if (err) return reject(err)
+                return resolve(res)
+            })
+        }
+    })
+}
+insert(posts)
+    .then(_ => {
+        connection.end()
+    })
+    .catch(err=>{
+        throw err
+    })
+

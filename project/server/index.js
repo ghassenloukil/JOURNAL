@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('../database/models/index.js')
+const db = require('../database/models/db.js')
 //TODO : some imports for your database
 const controller = require('../database/controlers/index.js')
 
@@ -40,7 +40,7 @@ app.get('/journals',(req,res) => {
 
 })
 
-app.post('/journals', (req, res) => {
+app.post('/blog', (req, res) => {
 const data = {
   title: req.body.title,
   author: req.body.author,
@@ -48,25 +48,31 @@ const data = {
   body: req.body.body,
   views : req.body.views
 }
-controller.findBlogAndUpdate(posts)
-  .then((result) => {
-    
-    res.status(200).send(result)
-  })
-  .catch(err => {
-    res.status(500).send('error')
-  })
-})
-app.get('/journals',(req,res) => {
-controller.fetchBlog()
-.then((resultat) =>{
-  res.status(200).send(resultat)
-})
-.catch(err => {
-  res.status(500).send('error')
-})
+
 
 })
+app.get('/blog',(req,res)=>{
+  db.selectAll((err,results)=>{
+    err ? res.status(500).json(err):res.status(200).json(results)
+  })
+})
+
+app.patch('/blog/:blogId' , function (req, res){
+  db.updateviews([ req.body.views,req.params.blogId],(err,results)=>{
+    err ? console.log(err) : res.status (201).send(results , 'updated')
+  })
+})
+
+app.post('/blog', function (req, res) {
+  db.postBlog([req.body.title, req.body.author, req.body.imageUrl, req.body.body, req.body.views], function (err, results) {
+    if (err) {
+      console.log(err)
+    }
+    res.json(results)
+  })
+})
+
+
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });

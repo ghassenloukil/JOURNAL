@@ -1,10 +1,10 @@
 import React from 'react';
 
-const InsertConfirmation = ({ journal }) => {
+const InsertConfirmation = ({ data}) => {
   return (
     <div>
       <p>
-        {`MR${journal.firstName}, welcome .`}
+        {`MR${data.firstName}, welcome .`}
       </p>
     </div>
   );

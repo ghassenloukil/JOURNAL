@@ -41,12 +41,12 @@ class Form extends React.Component {
 
     render() {
        if (this.state.data.type=='inserted')
-       {return( <form><Insert journal= {this.state.data}/></form> )}
+       {return( <form><InsertConfirmation data= {this.state.data}/></form> )}
  
        else {
 
         return (
-            <div>
+            <div className="form">
 
                 <form> {(this.state.display_Alert) ? <div className='Alert'>Fill Again <br /> </div > : <div></div>}
                     <label>firstName</label><br />

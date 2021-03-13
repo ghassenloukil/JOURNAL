@@ -1,51 +1,56 @@
 import React from 'react';
-import $ from 'jquery';
+import ReactDOM from 'react-dom';
+import Blogs from './Blogs.jsx'
 import Form from './Form.jsx'
-
-
+import Home from './Home.jsx'
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data : [],
-      showTable:false
+    constructor(props){
+        super(props)
+        this.state={
+            toggle:'form'
+        }
+        this.changeView=this.changeView.bind(this)
     }
-
-  } 
-  componentDidMount () {
-    $.ajax({
-      url : '/journals',
-      method : 'GET',
-      contentType : 'application/json',
-      success :  (data)=> {
-        this.setState({data: data})
-      }
-    }) 
-  }
-
-  render() {
-    console.log(this.state.data)
-    var table =   <table>
-    <thead>
-      <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email</th>
-      <th>Password</th>
-    </tr>
-    </thead>
-    <tbody>
-  {this.state.data.map((e,i)=><tr key={i}><td>{e.firstName}</td><td>{e.lastName}</td><td>{e.email}</td><td>{e.password}</td></tr>)}
-    </tbody>
-  </table>
-return (
- 
-  <div> <Form/>
-
-  {(this.state.showTable)? table : ''}
-  </div>
-)
-  }
+    changeView(option){
+        this.setState({
+            toggle:option
+        })
+    }
+    render(){
+        const {toggle}=this.state
+        return (
+            <div>
+                <div className="nav">
+                <span className={toggle==='form'
+                     ? 'nav-selected'
+                     : 'nav-unselected'}
+                     onClick={()=>this.changeView('form')}>
+                     SIGNUP
+                     </span>
+                    <span className={toggle==='blogs'
+                    ?'nav-selected'
+                     :'nav-unselected'}
+                     onClick={()=>this.changeView('blogs')}>
+                         Home
+                     </span>
+                     <span className={toggle==='home'
+                     ? 'nav-selected'
+                     : 'nav-unselected'}
+                     onClick={()=>this.changeView('home')}>
+                     Blogs
+                     </span>
+                </div>
+                <div className='main'>
+                    {toggle==='form'
+                    ? <Form/>
+                    :toggle==='home'
+                    ?<Home />
+                    :<Blogs/>
+                    }
+                </div>
+                
+            </div>
+        )
+    }
 }
-
-export default App;
+export default App

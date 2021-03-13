@@ -68,4 +68,247 @@ body {
   .container {
     padding: 16px;
   }
-  
+  @import url('https://fonts.googleapis.com/css?family=Francois+One|PT+Serif:400,400i,700,700i');
+
+body {
+  font-family: 'PT Serif', sans-serif;
+  margin: 0px;
+  color: #2C3E50;
+  background-color: #ECF0F1;
+  font-size: 1.1em;
+}
+
+h2 {
+  color: #2C3E50;
+}
+
+.feed-list-item {
+  min-height: 350px;
+  margin: 40px;
+  list-style: none;
+  border: 1px solid #77777769;
+  background-color: #fdfdfd;
+  border-radius: 4px;
+  padding: 30px 50px 0px 50px;
+  box-shadow: 0 0 1em #80808066;
+}
+
+.feed-list-item-image {
+  float: left;
+  width: 100%;
+  max-width: 350px;
+  margin-right: 20px;
+  margin-bottom: 5%;
+}
+
+.feed-list-item-title {
+  font-size: 1.8em;   
+  font-family: 'Francois One';
+  margin-bottom: 10px;
+}
+
+.feed-list-item-lede {
+  display: block;
+  margin-bottom: 50px;
+}
+
+.feed-list-item-byline {
+  font-size: .8em;
+  margin-bottom: 15px;
+  color: #777777;
+}
+
+.feed-list-item-byline-author {
+  font-weight: bolder;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  font-family: 'PT Serif', sans-serif;
+  color: #ECF0F1;
+  background-color: #E74C3C;
+}
+
+.post {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  background-color: white;
+  padding: 5px 20px 5px 20px;
+}
+
+.post-title {
+  font-family: 'Francois One';
+  line-height: 1.5em;
+}
+
+.post-image {
+  max-width: 100%;
+}
+
+.post-byline {
+  color: #777777;
+  font-size: .8em;
+  margin-bottom: 5%;
+}
+
+.post-byline-author {
+  font-weight: bolder;
+}
+
+.create h2 {
+  border-bottom: 1px solid #777777;
+  width: 90%;
+  font-family: 'Francois One';
+}
+
+.create-editor {
+  width: 40%;
+  float: left;
+}
+
+.create-preview {
+  width: 60%;
+  float: right;
+  margin: 0 auto;
+}
+
+
+.create-input {
+  width: 80%;
+  display: block;
+  font-size: .9em;
+  height: 30px;
+  margin-bottom: 15px;
+  border: none;
+  padding: 5px;
+}
+
+.create-body-textarea {
+  width: 80%;
+  font-size: .9em;
+  display: block;
+  height: 400px;
+  border: none;
+  padding: 5px;
+  resize: none;
+}
+
+.create-submit-button {
+  margin-top: 15px;
+  font-size: .9em;
+  height: 30px;
+}
+
+.comment-input {
+  width: 60%;
+  font-size: .9em;
+  margin-top: 15px;
+  border: none;
+  padding: 5px;
+  resize: none;
+}
+
+.comment-submit {
+  margin-left: 15px;
+  font-size: .9em;
+  height: 30px;
+  transform: translateY(-50%);
+}
+
+.comment-entry {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #3498DB;
+  list-style: none;
+  width: 70%;
+  font-size: .9em;
+}
+
+.comment-entry:hover {
+  background-color: rgba(52, 152, 219, 0.17);
+}
+
+.post-list-entry {
+  list-style: none;
+  border: 1px solid #3498DB;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 75%;
+}
+
+.post-list-entry:hover {
+  cursor: pointer;
+  background-color: rgba(52, 152, 219, 0.17);
+}
+
+.post-list-entry-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  font-family: 'Francois One';
+}
+
+.post-list-entry-stats {
+  font-size: .8em;
+}
+
+.stats-list-item-views {
+  font-weight: bold;
+}
+
+.post-stats {
+  font-size: .8em;
+  cursor: pointer;
+  width: 75px;
+  display: inline;
+}
+
+.post-stats-comments {
+  margin-left: 20px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.9em;
+  margin-right: auto;
+  margin-left: 10px;
+  font-family: 'Francois One';
+  color: #ffffff;
+}
+
+.main {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.nav {
+  background-color: #3498DB;
+  margin: 0px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: 'Francois One';
+}
+
+.nav-selected {
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+  margin-right: 5px;
+  font-size: 1.1em;
+}
+
+.nav-unselected {
+  padding: 5px;
+  margin-right: 5px;
+  font-size: 1.1em;
+}
+
+.feed {
+  padding: 0px 10% 0px 10%;
+}
