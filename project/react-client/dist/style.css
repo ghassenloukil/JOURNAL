@@ -1,6 +1,6 @@
 body {
     background-color: radial-gradient(#302b63, #24243e);
-    background-image: url("https://camo.envatousercontent.com/e333a4e98051e9d6acb0af13ff1842b77741e194/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f645a6e73306c3375734141573961545872632f67697068792e676966");
+    background-image: url("http://cdn.lowgif.com/full/ad431d14c6a46b40-.gif");
     background-size: 1000px;
     width: 100%;
     margin: 0;
@@ -43,7 +43,7 @@ body {
   }
   
   button {
-    background-color: #599baf;
+    background-color: #5eabc2;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -70,13 +70,7 @@ body {
   }
   @import url('https://fonts.googleapis.com/css?family=Francois+One|PT+Serif:400,400i,700,700i');
 
-body {
-  font-family: 'PT Serif', sans-serif;
-  margin: 0px;
-  color: #2C3E50;
-  background-color: #ECF0F1;
-  font-size: 1.1em;
-}
+
 
 h2 {
   color: #2C3E50;
@@ -286,7 +280,7 @@ button {
 }
 
 .nav {
-  background-color: #3498DB;
+  background-color: #4187a3;
   margin: 0px;
   padding: 10px;
   display: flex;

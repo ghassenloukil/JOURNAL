@@ -1,10 +1,11 @@
 import React from 'react';
 
-const InsertConfirmation = ({ data}) => {
+const InsertConfirmation = ({ user }) => {
   return (
     <div>
       <p>
-        {`MR${data.firstName}, welcome .`}
+        {`hello${user.firstName},  ${user.lastName} you are now on the list.
+        We\'ll send you an email confirmation to ${user.email}.`}
       </p>
     </div>
   );
